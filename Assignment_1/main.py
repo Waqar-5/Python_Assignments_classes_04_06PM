@@ -5,7 +5,7 @@
 # declare a variable
 student_name = "Waqar Ali"
 # its type 
-print(type(student_name)) # <class 'str'>
+print("Type of student_name: ",type(student_name)) # <class 'str'>
 
 print("***********************************************")
 
@@ -16,6 +16,7 @@ my_age = 18
 my_age *=2
 # print its value
 print(my_age)
+# print("Double age is:", my_age * 2)
 
 
 print("***********************************************")
@@ -33,6 +34,10 @@ float_num = 22.2
 print("The type of ",num ," is ",type(num))
 print("The type of ",string_name ," is ",type(string_name))
 print("The type of ",float_num ," is ",type(float_num))
+
+# print("Type of num:", type(num))
+# print("Type of string_name:", type(string_name))
+# print("Type of float_num:", type(float_num))
 
 print("***********************************************")
 
@@ -55,7 +60,8 @@ num2 = int(input("Enter second number: "))
 result = num1 + num2
 # printing sum of two numbers and its type 
 print(f"The sum of {num1} and {num2} is",result,"\ntype of result is " ,type(result))
-
+# print(f"The sum of {num1} and {num2} is {result}")
+# print("Type of result:", type(result))
 
 print("***********************************************")
 
@@ -86,7 +92,7 @@ print("***********************************************")
 # Q:8. What is the type and output of: `result = 3 + 4.0 + True`? 
 result = 3 + 4.0 + True #The output 8.0
 print("The answer of this (3 + 4.0 + True) expression is ",result)
-
+print("Type of result:", type(result))         # float
 
 print("***********************************************")
 
