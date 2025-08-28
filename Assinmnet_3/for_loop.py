@@ -236,8 +236,8 @@
 
 
 
-#Q#4: Display all product prices from a list with “PKR” appended.
-prices = [100, 250, 399, 500, 1200]
+# Q#4: Display all product prices from a list with “PKR” appended.
+# prices = [100, 250, 399, 500, 1200]
 # for price in prices:
 #     print(f"{price} PKR")
 
@@ -300,7 +300,7 @@ prices = [100, 250, 399, 500, 1200]
 
 
 #1. Using String Slicing
-contacts = ["03001234567", "03451239876", "03111234555"]
+# contacts = ["03001234567", "03451239876", "03111234555"]
 # for phone in contacts:
 #     masked = "*" * (len(phone) - 4) + phone[-4:]
 #     print(masked)
@@ -449,7 +449,7 @@ contacts = ["03001234567", "03451239876", "03111234555"]
 
 
 # 3.Using split() + reversed()
-sentence = "I love Python"
+# sentence = "I love Python"
 
 # reversed() returns an iterator, not a list
 # reversed_words = reversed(sentence.split())
@@ -539,12 +539,12 @@ sentence = "I love Python"
 
 
 # Q:8. Loop through a shopping cart and print “Out of stock” if quantity = 0.
-shopping_cart = [
-    {"item": "Laptop", "quantity": 2},
-    {"item": "Phone", "quantity": 0},
-    {"item": "Headphones", "quantity": 5},
-    {"item": "Charger", "quantity": 0}
-]
+# shopping_cart = [
+#     {"item": "Laptop", "quantity": 2},
+#     {"item": "Phone", "quantity": 0},
+#     {"item": "Headphones", "quantity": 5},
+#     {"item": "Charger", "quantity": 0}
+# ]
 
 #1. Simple for loop with if
 # Loop through each product in shopping_cart
@@ -687,16 +687,16 @@ shopping_cart = [
 
 # Q#10: Print first 5 notifications from a list.
 # notifications list
-notifications = [
-    "New message from Ali",
-    "Your order has been shipped",
-    "Password change successful",
-    "Meeting at 3 PM",
-    "Assignment due tomorrow",
-    "Update available for your app",
-    "New follower request",
-    "Low battery warning"
-]
+# notifications = [
+#     "New message from Ali",
+#     "Your order has been shipped",
+#     "Password change successful",
+#     "Meeting at 3 PM",
+#     "Assignment due tomorrow",
+#     "Update available for your app",
+#     "New follower request",
+#     "Low battery warning"
+# ]
 
 
 # 1. Using for loop with range
@@ -748,3 +748,99 @@ notifications = [
 # 7. Using map() function
 # Use map with slicing
 # list(map(print, notifications[:5]))  # map applies print to each element
+
+
+
+
+# 11. Explain difference between `for item in list:` and `for i in range(len(list)):`
+"""11. Difference between for item in list: and for i in range(len(list)):
+
+🔹 Style 1: for item in list:
+
+Directly loops over each element.
+
+You don’t care about the index.
+
+Pythonic, clean, more readable.
+
+fruits = ["apple", "banana", "cherry"]
+
+# Looping directly over elements
+for fruit in fruits:   # fruit takes values: "apple", "banana", "cherry"
+    print(fruit)       # ✅ Clean, readable
+
+
+🔹 Style 2: for i in range(len(list)):
+
+Loops over index numbers from 0 to len(list)-1.
+
+You need the index to access elements or do index-based operations.
+
+fruits = ["apple", "banana", "cherry"]
+
+# Looping using index
+for i in range(len(fruits)):   # i takes values: 0, 1, 2
+    print(i, fruits[i])        # prints index + element
+
+
+✅ Key Points / Interview-Ready Comparison:
+
+for item in list: → best when you just need values.
+
+for i in range(len(list)): → best when you need both index & value.
+
+If you need both index and value together, Python gives enumerate() (preferred way).
+
+for i, fruit in enumerate(fruits):
+    print(i, fruit)   # Cleaner than range(len(list))
+
+
+👉 Interview Tip: Say that enumerate is the most Pythonic when both index & value are needed."""
+
+
+# 12. How does Python handle iterators internally in for loops?
+"""When you write:
+
+for item in my_list:
+    print(item)
+
+
+🔎 What actually happens inside Python:
+
+Python calls iter(my_list) → creates an iterator object.
+
+Then it repeatedly calls next(iterator) to get each element.
+
+When the iterator is exhausted, it raises StopIteration.
+
+The for loop catches that exception and exits gracefully.
+
+💡 Example using iterator manually (what for does behind the scenes):
+
+fruits = ["apple", "banana", "cherry"]
+
+# Step 1: Create iterator
+it = iter(fruits)
+
+# Step 2: Fetch elements using next()
+print(next(it))  # apple
+print(next(it))  # banana
+print(next(it))  # cherry
+
+# Step 3: If you call again, StopIteration will be raised
+# print(next(it))  # ❌ StopIteration
+
+
+✅ Key Points (easy to memorize for interview):
+
+A for loop in Python = iter() + repeated next() calls.
+
+It stops automatically when StopIteration is raised.
+
+This makes for loops work not only on lists, but on any iterable (lists, tuples, sets, dicts, files, generators)."""
+
+# Quick Interview Answer:
+
+# "for item in list: is used to directly get values, while for i in range(len(list)): is index-based looping. In real projects, enumerate is preferred when both index and value are needed.
+
+# Internally, Python’s for loop converts the iterable into an iterator using iter(), then repeatedly calls next() until StopIteration is raised, which makes it work for any iterable, not just lists."
