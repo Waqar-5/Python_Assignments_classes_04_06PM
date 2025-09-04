@@ -4,10 +4,10 @@
 
 #Q:47. Loop through employee salaries, print only above average.
 # Sample employee salaries
-# salaries = [30000, 50000, 40000, 60000, 35000, 45000]
+salaries = [30000, 50000, 40000, 60000, 35000, 45000]
 
-# average_salary = sum(salaries) / len(salaries)
-# print(f"Average Salary: {average_salary}\n")
+average_salary = sum(salaries) / len(salaries)
+print(f"Average Salary: {average_salary}\n")
 
 # # -----------------------------
 # # Method 1: Using basic for loop
@@ -84,23 +84,26 @@
 # # =========================================================
 
 
+
+
+print("***********************************************************")
 #Q:48. Loop through list of student grades, print pass/fail.
-# grades = [85, 42, 76, 90, 58, 33, 67]
+grades = [85, 42, 76, 90, 58, 33, 67]
 
 # Define pass mark
-# pass_mark = 50
-# print(f"Passing Mark: {pass_mark}\n")
+pass_mark = 50
+print(f"Passing Mark: {pass_mark}")
 
-# # # Method 1: Using basic for loop
-# print("Method 1: Using basic for loop")
-# for grade in grades:
-#     # Compare grade with pass mark
-#     if grade >=  pass_mark:
-#         print(f"Grade: {grade} - Pass")  #Print Pass
-#     else:
-#         print(f"Grade: {grade} - Fail")  #Print Fail
+# # Method 1: Using basic for loop
+print("Method 1: Using basic for loop")
+for grade in grades:
+    # Compare grade with pass mark
+    if grade >=  pass_mark:
+        print(f"Grade: {grade} - Pass")  #Print Pass
+    else:
+        print(f"Grade: {grade} - Fail")  #Print Fail
 
-# print("\n")
+print("\n")
 
 
 # Method 2: Using for loop with index
@@ -157,19 +160,19 @@
 
 
 
-
+print("***********************************************************")
 #Q:49. Remove duplicates from list manually (without set).
-# numbers = [1, 2, 3, 2, 4, 3, 5, 1, 6, 4]
-# print(f"Original List: {numbers}\n")
+numbers = [1, 2, 3, 2, 4, 3, 5, 1, 6, 4]
+print(f"Original List: {numbers}\n")
 
-# # Method 1: Using for loop and new list
-# print("Method 1: Using for loop and new list")
-# unique_numbers = []  # New list to store unique numbers
-# for num in numbers:
-#     # Check if number is not already in unique_numbers
-#     if num not in unique_numbers:
-#         unique_numbers.append(num)  # Add unique number to list
-# print(f"Unique List: {unique_numbers}\n")
+# Method 1: Using for loop and new list
+print("Method 1: Using for loop and new list")
+unique_numbers = []  # New list to store unique numbers
+for num in numbers:
+    # Check if number is not already in unique_numbers
+    if num not in unique_numbers:
+        unique_numbers.append(num)  # Add unique number to list
+print(f"Unique List: {unique_numbers}\n")
 
 
 # Method 2: Using while loop
@@ -216,17 +219,18 @@
 
 
 
+print("***********************************************************")
 #Q:50. Flatten a nested list using loop.
-# nested_list = [[1, 2], [3, 4, 5], [6], [7, 8, 9]]
-# print(f"Original Nested List: {nested_list}\n")
+nested_list = [[1, 2], [3, 4, 5], [6], [7, 8, 9]]
+print(f"Original Nested List: {nested_list}\n")
 
-# # Method 1: Using nested for loop
-# print("Method 1: Using nested for loop")
-# flat_list = [] # Empty list to store flattened elements
-# for sublist in nested_list:
-#     for item in sublist:
-#         flat_list.append(item)  # Append each element of sublist
-# print(flat_list, "\n")
+# Method 1: Using nested for loop
+print("Method 1: Using nested for loop")
+flat_list = [] # Empty list to store flattened elements
+for sublist in nested_list:
+    for item in sublist:
+        flat_list.append(item)  # Append each element of sublist
+print(flat_list, "\n")
 
 
 
@@ -269,18 +273,19 @@
 
 
 
+print("***********************************************************")
 #Q:51. Loop to validate email addresses (must contain `@`).
-# emails = ["waqar@gmail.com", "john.doe.com", "alice@", "bob@example.com", "notanemail"]
+emails = ["waqar@gmail.com", "john.doe.com", "alice@", "bob@example.com", "notanemail"]
 
-# # Method 1: Using basic for loop
-# print("Method 1: Using basic for loop")
-# for email in emails:
-#     # check if '@' is present in email
-#     if '@' in email:
-#         print(f"{email} is VALID")
-#     else:
-#         print(f"{email} is INVALID")
-# print("\n")
+# Method 1: Using basic for loop
+print("Method 1: Using basic for loop")
+for email in emails:
+    # check if '@' is present in email
+    if '@' in email:
+        print(f"{email} is VALID")
+    else:
+        print(f"{email} is INVALID")
+print("\n")
 
 # Method 2: Using for loop with index
 # print("Method 2: Using for loop with index")
@@ -329,26 +334,27 @@
 
 
 
+print("***********************************************************")
 #Q:52. Count number of urgent messages in chat logs.
 
-# chat_logs = [
-#     "Please send the report",
-#     "This is urgent, reply ASAP",
-#     "Meeting at 5 PM",
-#     "Urgent: Server is down",
-#     "Lunch time",
-#     "We have an urgent issue to fix"
-# ]
+chat_logs = [
+    "Please send the report",
+    "This is urgent, reply ASAP",
+    "Meeting at 5 PM",
+    "Urgent: Server is down",
+    "Lunch time",
+    "We have an urgent issue to fix"
+]
 
 
 # Method 1: Using basic for loop
-# print("Method 1: Using basic for loop")
-# urgent_count = 0 # Initialize counter
-# for message in chat_logs:
-#     # Check if 'urgent' is in message (case-sensitive)
-#     if "urgent" in message.lower():
-#         urgent_count += 1  # Increment cpunter if urgent
-# print(f"Number of urgent message: {urgent_count}\n")
+print("Method 1: Using basic for loop")
+urgent_count = 0 # Initialize counter
+for message in chat_logs:
+    # Check if 'urgent' is in message (case-sensitive)
+    if "urgent" in message.lower():
+        urgent_count += 1  # Increment cpunter if urgent
+print(f"Number of urgent message: {urgent_count}\n")
 
 
 
@@ -394,6 +400,9 @@
 
 
 
+
+print("***********************************************************")
+
 #Q:53. Loop to show only Pakistani contacts (+92).
 # Sample contact list
 contacts = [
@@ -404,12 +413,12 @@ contacts = [
     "+921234567890"
 ]
 # Method 1: Using basic for loop
-# print("Method 1: Using basic for loop")
-# for contact in contacts:
-#     # check if contact status with '+92'
-#     if contact.startswith("+92"):
-#         print(contact)  # print Pakistani contact
-# print("\n")
+print("Method 1: Using basic for loop")
+for contact in contacts:
+    # check if contact status with '+92'
+    if contact.startswith("+92"):
+        print(contact)  # print Pakistani contact
+print("\n")
 
 
 # Method 2: Using for loop with index
@@ -465,35 +474,37 @@ contacts = [
 
 
 
+print("***********************************************************")
+
 #Q:54. Simulate inventory reduction when order placed.
 
 
 # # Sample inventory: product name and quantity
-# inventory = {
-#     "Apples": 50,
-#     "Bananas": 30,
-#     "Oranges": 20
-# }
+inventory = {
+    "Apples": 50,
+    "Bananas": 30,
+    "Oranges": 20
+}
 
-# # Sample orders: product name and quantity ordered
-# orders = [
-#     {"product": "Apples", "quantity": 5},
-#     {"product": "Oranges", "quantity": 10},
-#     {"product": "Bananas", "quantity": 15},
-#     {"product": "Apples", "quantity": 20},
-# ]
+# Sample orders: product name and quantity ordered
+orders = [
+    {"product": "Apples", "quantity": 5},
+    {"product": "Oranges", "quantity": 10},
+    {"product": "Bananas", "quantity": 15},
+    {"product": "Apples", "quantity": 20},
+]
 
 # Method 1: Using basic for loop
-# print("Method 1: Using basic for loop")
-# for order in orders:
-#     product = order["product"]
-#     qty_ordered = order["quantity"]
-#     # Check if product exists in inventory
-#     if product in inventory:
-#         # reduce inventory quantity
-#         inventory[product] -= qty_ordered
-#         print(f"{qty_ordered} {product} ordered, remaining: {inventory[product]}")
-# print("\n")
+print("Method 1: Using basic for loop")
+for order in orders:
+    product = order["product"]
+    qty_ordered = order["quantity"]
+    # Check if product exists in inventory
+    if product in inventory:
+        # reduce inventory quantity
+        inventory[product] -= qty_ordered
+        print(f"{qty_ordered} {product} ordered, remaining: {inventory[product]}")
+print("\n")
 
 
 # # Method 2: Using for loop with index
@@ -543,23 +554,27 @@ contacts = [
 # print("\n")  # Line break
 
 
+
+
+print("***********************************************************")
+
 #Q:55. Loop through doctor profiles and print specialists only.
 
 # Sample doctor profiles
-# doctors = [
-#     {"name": "Dr. Ahmed", "specialist": True},
-#     {"name": "Dr. Sara", "specialist": False},
-#     {"name": "Dr. Ameer", "specialist": True},
-#     {"name": "Dr. Hina", "specialist": False},
-#     {"name": "Dr. Sameer", "specialist": True}
-# ]
+doctors = [
+    {"name": "Dr. Ahmed", "specialist": True},
+    {"name": "Dr. Sara", "specialist": False},
+    {"name": "Dr. Ameer", "specialist": True},
+    {"name": "Dr. Hina", "specialist": False},
+    {"name": "Dr. Sameer", "specialist": True}
+]
 
 # Method 1: Using basic for loop
-# print("Method 1: Using basic for loop")
-# for doctor in doctors: # loop through each doctor
-#     if doctor["specialist"]: # check if doctor is a specialist
-#         print(f"{doctor['name']} is a specialists")  # Print specialist doctor
-# print("\n")
+print("Method 1: Using basic for loop")
+for doctor in doctors: # loop through each doctor
+    if doctor["specialist"]: # check if doctor is a specialist
+        print(f"{doctor['name']} is a specialists")  # Print specialist doctor
+print("\n")
 
 
 # Method 2: Using for loop with index
@@ -602,6 +617,8 @@ contacts = [
 
 
 
+
+print("***********************************************************")
 #Q:56. Loop through dictionary of courses per student.
 students_courses = {
     "Ali": ["Math", "Physics", "Chemistry"],
@@ -610,11 +627,11 @@ students_courses = {
 }
 
 # Method 1: Using basic for loop (keys)
-# print("Method 1: Using basic for loop (keys)")
-# for student in students_courses: #  Loop through dictionary keys
-#     courses = students_courses[student] # get courses for student
-#     print(f"{student} is enrolled in: {courses}")  # Print student and their courses
-# print("\n")
+print("Method 1: Using basic for loop (keys)")
+for student in students_courses: #  Loop through dictionary keys
+    courses = students_courses[student] # get courses for student
+    print(f"{student} is enrolled in: {courses}")  # Print student and their courses
+print("\n")
 
 
 # # Method 2: Using for loop with .items()

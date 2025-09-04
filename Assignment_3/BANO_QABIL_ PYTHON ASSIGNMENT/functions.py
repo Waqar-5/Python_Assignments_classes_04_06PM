@@ -1,133 +1,148 @@
 # Section D: Functions + Loops (Real-Life + Interview Qs)
 # Q:35. Function to count how many `.pdf` files are in a list.
+files = ['document.pdf', 'image.png', 'report.pdf', 'notes.txt']
+def count_pdf_files(file_list):
+    count = 0
+    for file in file_list:
+        if file.endswith('.pdf'):
+            count += 1
+    return count
+# Example usage:
 # files = ['document.pdf', 'image.png', 'report.pdf', 'notes.txt']
-# def count_pdf_files(file_list):
-#     count = 0
-#     for file in file_list:
-#         if file.endswith('.pdf'):
-#             count += 1
-#     return count
-# # Example usage:
-# # files = ['document.pdf', 'image.png', 'report.pdf', 'notes.txt']
-# print(count_pdf_files(files))  # Output: 2
+print(count_pdf_files(files))  # Output: 2
 
 
-
+print("***********************************************************")
 
 # Q:36. Function to check username availability.
-# existing_usernames = ['user1', 'admin', 'guest']
-# def is_username_available(username, existing_usernames):
-#     return username not in existing_usernames
-# # Example usage:
-# print(is_username_available('newuser', existing_usernames))  # Output: True
-# print(is_username_available('admin', existing_usernames))    # Output: False
+existing_usernames = ['user1', 'admin', 'guest']
+def is_username_available(username, existing_usernames):
+    return username not in existing_usernames
+# Example usage:
+print(is_username_available('newuser', existing_usernames))  # Output: True
+print(is_username_available('admin', existing_usernames))    # Output: False
 
 
 
+
+print("***********************************************************")
 #Q:37. Function to return longest word in a sentence.
-# sentence = "Hello world! Welcome to Python programming."
-# def longest_word(sentence):
-#     words = sentence.split()
-#     longest = ""
-#     for word in words:
-#         if len(word) > len(longest):
-#             longest = word
-#     return longest
-# # Example usage:
-# print(longest_word(sentence))  # Output: programming.
+sentence = "Hello world! Welcome to Python programming."
+def longest_word(sentence):
+    words = sentence.split()
+    longest = ""
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+    return longest
+# Example usage:
+print(longest_word(sentence))  # Output: programming.
 
 
 
 
+print("***********************************************************")
 #Q:38. Function that checks if string is palindrome using loop.
-# word = "racecar"
-# def is_palindrome(word):
-#     left, right = 0, len(word) - 1
-#     while left < right:
-#         if word[left] != word[right]:
-#             return False
-#         left += 1
-#         right -= 1
-#     return True
-# # Example usage:
-# print(is_palindrome(word))  # Output: True
+word = "racecar"
+def is_palindrome(word):
+    left, right = 0, len(word) - 1
+    while left < right:
+        if word[left] != word[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+# Example usage:
+print(is_palindrome(word))  # Output: True
 
 
 
 
+print("***********************************************************")
 #Q:39. Function that prints multiplication table.
-# def multiplication_table(n):
-#     for i in range(1, 11):
-#         print(f"{n} x {i} = {n * i}")
+def multiplication_table(n):
+    for i in range(1, 11):
+        print(f"{n} x {i} = {n * i}")
 
-# # Example usage:
-# multiplication_table(5)
+# Example usage:
+multiplication_table(5)
 
 
 
+print("***********************************************************")
 # Q:40.Function to simulate dice roll until 6 appears.
-# import random
-# def roll_until_six():
-#     roll = 0
-#     while roll != 6:
-#         roll = random.randint(1, 6)
-#         print(f"Rolled: {roll}")
-#     print("Got a 6! Stopping.")
-# # Example usage:
-# roll_until_six()  # Output: Rolls until a 6 is rolled.
+import random
+def roll_until_six():
+    roll = 0
+    while roll != 6:
+        roll = random.randint(1, 6)
+        print(f"Rolled: {roll}")
+    print("Got a 6! Stopping.")
+# Example usage:
+roll_until_six()  # Output: Rolls until a 6 is rolled.
 
 
 
+print("***********************************************************")
 # Q:41. Function to filter products under given price.
-# products = [{'name': 'Laptop', 'price': 800}, {'name': 'Mouse', 'price': 20}, {'name': 'Keyboard', 'price': 50}]
-# def filter_products_by_price(products, max_price):
-#     affordable_products = []
-#     for product in products:
-#         if product['price'] < max_price:
-#             affordable_products.append(product)
-#     return affordable_products
-# # Example usage:
-# print(filter_products_by_price(products, 100))  # Output: [{'name': 'Mouse', 'price': 20}, {'name': 'Keyboard', 'price': 50}]
+products = [{'name': 'Laptop', 'price': 800}, {'name': 'Mouse', 'price': 20}, {'name': 'Keyboard', 'price': 50}]
+def filter_products_by_price(products, max_price):
+    affordable_products = []
+    for product in products:
+        if product['price'] < max_price:
+            affordable_products.append(product)
+    return affordable_products
+# Example usage:
+print(filter_products_by_price(products, 100))  # Output: [{'name': 'Mouse', 'price': 20}, {'name': 'Keyboard', 'price': 50}]
 
 
 
+
+
+print("***********************************************************")
 #Q:42. Function that masks all passwords in list.
-# passwords = ['mypassword', '123456', 'adminpass']
-# def mask_passwords(password_list):
-#     masked = []
-#     for password in password_list:
-#         masked.append('*' * len(password))
-#     return masked
-# # Example usage:
-# print(mask_passwords(passwords))  # Output: ['**********
+passwords = ['mypassword', '123456', 'adminpass']
+def mask_passwords(password_list):
+    masked = []
+    for password in password_list:
+        masked.append('*' * len(password))
+    return masked
+# Example usage:
+print(mask_passwords(passwords))  # Output: ['**********
 
 
+
+
+print("***********************************************************")
 #Q:43. Function to count frequency of words in sentence.
-# sentence = "hello world hello"
-# def word_frequency(sentence):
-#     words = sentence.split()
-#     frequency = {}
-#     for word in words:
-#         if word in frequency:
-#             frequency[word] += 1
-#         else:
-#             frequency[word] = 1
-#     return frequency
-# # Example usage:
-# print(word_frequency(sentence))  # Output: {'hello': 2, 'world':
+sentence = "hello world hello"
+def word_frequency(sentence):
+    words = sentence.split()
+    frequency = {}
+    for word in words:
+        if word in frequency:
+            frequency[word] += 1
+        else:
+            frequency[word] = 1
+    return frequency
+# Example usage:
+print(word_frequency(sentence))  # Output: {'hello': 2, 'world':
 
 
+
+
+print("***********************************************************")
 # 44. Function to extract hashtags from social media post.
-# post = "Loving the #sunshine and #beach vibes! #summer"
-# def extract_hashtags(post):
-#     words = post.split()
-#     hashtags = []
-#     for word in words:
-#         if word.startswith('#'):
-#             hashtags.append(word)
-#     return hashtags
-# # Example usage:
-# print(extract_hashtags(post))  # Output: ['#sunshine', '#beach', '#summer']
+post = "Loving the #sunshine and #beach vibes! #summer"
+def extract_hashtags(post):
+    words = post.split()
+    hashtags = []
+    for word in words:
+        if word.startswith('#'):
+            hashtags.append(word)
+    return hashtags
+# Example usage:
+print(extract_hashtags(post))  # Output: ['#sunshine', '#beach', '#summer']
 
 
 

@@ -50,13 +50,14 @@ for i in range(1, 4):        # Outer loop → rows
 # Q:23. Print all seat numbers in cinema (Rows A–C, Seats 1–5 → A1, A2...).
 # Cinema Seat Generator
 
-# rows = ["A", "B", "C"]          # Define rows
-# seats = range(1, 6)             # Define seats (1–5)
-# for row in rows:                 # Outer loop → rows
-#     for seat in seats:           # Inner loop → seats
-#         print(f"{row}{seat}", end=" ")  # Print seat number
-#     print()  # Move to next row                             
+rows = ["A", "B", "C"]          # Define rows
+seats = range(1, 6)             # Define seats (1–5)
+for row in rows:                 # Outer loop → rows
+    for seat in seats:           # Inner loop → seats
+        print(f"{row}{seat}", end=" ")  # Print seat number
+    print()  # Move to next row                             
 
+print("***********************************************************")
 
 # Other ways
 # Way 2: Using while loops
@@ -138,41 +139,43 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
+
 # Q:24. Generate all shirt–pant combinations from 2 lists.
-# list1 = ["Red Shirt", "Blue Shirt"]
-# list2 = ["Black Pant", "White Pant"]
-# for shirt in list1:
-#     for pant in list2:
-#         print(f"{shirt} + {pant}")  
+list1 = ["Red Shirt", "Blue Shirt"]
+list2 = ["Black Pant", "White Pant"]
+for shirt in list1:
+    for pant in list2:
+        print(f"{shirt} + {pant}")  
 
 
 
 # Other ways
-# -------------------------------
+
 # #  1: Define lists
-# # -------------------------------
+# 
 # shirts = ["Red", "Blue"]       # list of shirts
 # pants = ["Black", "White"]     # list of pants
 
 
-# # -------------------------------
+# 
 # #  2: Outer loop (shirts)
-# # -------------------------------
+# 
 # for shirt in shirts:           # for → keyword, shirt = "Red", then "Blue"
 #     print(shirt)               # just checking shirt values
 
 
-# # -------------------------------
+# 
 # #  3: Add inner loop (pants)
-# # -------------------------------
+# 
 # for shirt in shirts:               # outer loop for shirts
 #     for pant in pants:             # inner loop for pants
 #         print(pant)                # print pant values
 
 
-# # -------------------------------
+# 
 # #  4: Combine shirt + pant
-# # -------------------------------
+# 
 # for shirt in shirts:               # take one shirt
 #     for pant in pants:             # match with every pant
 #         print(f"{shirt} - {pant}") # print combination
@@ -236,14 +239,15 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
 #Q:25. Print every minute from 12:00 → 12:10.
-# for hour in range(12, 13):          # Outer loop → hours
-#     for minute in range(0, 11):     # Inner loop → minutes
-#         print(f"{hour}:{minute:02}")
-#         # :02 → pad with 0 if single digit (e.g. 1 →
-#         # 01, 2 → 02)
-# # Output:
-# # 12:00
+for hour in range(12, 13):          # Outer loop → hours
+    for minute in range(0, 11):     # Inner loop → minutes
+        print(f"{hour}:{minute:02}")
+        # :02 → pad with 0 if single digit (e.g. 1 →
+        # 01, 2 → 02)
+# Output:
+# 12:00
 
 
 # Other ways
@@ -317,16 +321,17 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
 #Q:26. Nested loop to show timetable: Days 1–3, Slots Morning/Evening.
-# days = [1, 2, 3]                 # Define days
-# slots = ["Morning", "Evening"]    # Define slots
-# for day in days:                  # Outer loop → days
-#     for slot in slots:            # Inner loop → slots
-#         print(f"Day {day} - {slot}")    
-#     print()  # Move to next day
-# # Output:   
-# # Day 1 - Morning
-# # Day 1 - Evening
+days = [1, 2, 3]                 # Define days
+slots = ["Morning", "Evening"]    # Define slots
+for day in days:                  # Outer loop → days
+    for slot in slots:            # Inner loop → slots
+        print(f"Day {day} - {slot}")    
+    print()  # Move to next day
+# Output:   
+# Day 1 - Morning
+# Day 1 - Evening
 
 
 # Other ways
@@ -383,16 +388,17 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
 #Q:27. Print seating chart for bus (Rows 1–3, Seats A–D).
-# rows = [1, 2, 3]                # Define rows
-# seats = ["A", "B", "C", "D"]  # Define seats
-# for row in rows:
-#     for seat in seats:
-#         print(f"Row {row} - Seat {seat}")
-#     print()  # Move to next row
-# # Output:
-# # Row 1 - Seat A
-# # Row 1 - Seat B
+rows = [1, 2, 3]                # Define rows
+seats = ["A", "B", "C", "D"]  # Define seats
+for row in rows:
+    for seat in seats:
+        print(f"Row {row} - Seat {seat}")
+    print()  # Move to next row
+# Output:
+# Row 1 - Seat A
+# Row 1 - Seat B
 
 
 # 2. Using While Loop
@@ -444,30 +450,34 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 # # : End of List Storage Approach
 
 
+
+print("***********************************************************")
+
 #Q:28. Print a Tic-Tac-Toe 3×3 board.
-# for row in range(3):            # Outer loop → rows
-#     for col in range(3):        # Inner loop → columns
-#         print(f"({row}, {col})", end=" ")  # Print cell coordinates
-#     print()  # Move to next row
-# # Output:
-# # (0, 0) (0, 1) (0, 2)
+for row in range(3):            # Outer loop → rows
+    for col in range(3):        # Inner loop → columns
+        print(f"({row}, {col})", end=" ")  # Print cell coordinates
+    print()  # Move to next row
+# Output:
+# (0, 0) (0, 1) (0, 2)
 
 
 # Other ways
 # : Start of Simple Print Approach
+print("***********************************************************")
 
 # print("Tic-Tac-Toe Board")  # : Title for clarity
-# print("-------------")      # : Top border
-# print("|   |   |   |")      # : First row
-# print("-------------")      # : Separator
-# print("|   |   |   |")      # : Second row
-# print("-------------")      # : Separator
-# print("|   |   |   |")      # : Third row
-# print("-------------")      # : Bottom border
+print("-------------")      # : Top border
+print("|   |   |   |")      # : First row
+print("-------------")      # : Separator
+print("|   |   |   |")      # : Second row
+print("-------------")      # : Separator
+print("|   |   |   |")      # : Third row
+print("-------------")      # : Bottom border
 
 # : Start of Loop Approach
 
-# print("Tic-Tac-Toe Board (Loop)")  # : Title
+print("Tic-Tac-Toe Board (Loop)")  # : Title
 
 # for row in range(3):  # : Loop for 3 rows
 #     print("-------------")          # : Print row separator
@@ -509,14 +519,15 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
 # 29. Print a star pyramid pattern.
-# rows = 5                          # Number of rows
-# for i in range(rows):            # Outer loop → rows
-#     for j in range(rows - i - 1):  # Inner loop → spaces
-#         print(" ", end="")         # Print space
-#     for k in range(2 * i + 1):     # Inner loop → stars
-#         print("*", end="")         # Print star
-#     print()  # Move to next row
+rows = 5                          # Number of rows
+for i in range(rows):            # Outer loop → rows
+    for j in range(rows - i - 1):  # Inner loop → spaces
+        print(" ", end="")         # Print space
+    for k in range(2 * i + 1):     # Inner loop → stars
+        print("*", end="")         # Print star
+    print()  # Move to next row
 
 
 
@@ -578,13 +589,14 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
 # Q:30. Nested loop to find all team pairs from player list.
-# players = ["Asad", "Ameer", "Sameer", "Wasim"]
-# # Outer loop: each player
-# for i in range(len(players)):
-#     # Inner loop: next players (avoid duplicates & self)
-#     for j in range(i + 1, len(players)):
-#         print(players[i], "vs", players[j])
+players = ["Asad", "Ameer", "Sameer", "Wasim"]
+# Outer loop: each player
+for i in range(len(players)):
+    # Inner loop: next players (avoid duplicates & self)
+    for j in range(i + 1, len(players)):
+        print(players[i], "vs", players[j])
 
 
 # Direct Nested Loop with Condition
@@ -623,12 +635,12 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
-
+print("***********************************************************")
 # Q:31. Generate full multiplication tables from 2–5.
-# for i in range(2, 6):       # Tables 2 to 5
-#     print(f"\n--- Table of {i} ---")
-#     for j in range(1, 11):  # Multipliers 1 to 10
-#         print(f"{i} x {j} = {i*j}")
+for i in range(2, 6):       # Tables 2 to 5
+    print(f"\n--- Table of {i} ---")
+    for j in range(1, 11):  # Multipliers 1 to 10
+        print(f"{i} x {j} = {i*j}")
 
 
 # While Loops
@@ -685,13 +697,14 @@ Useful in real life → Combinations, permutations, grouping, infinite sequences
 
 
 
+print("***********************************************************")
 #Q:32. Print shopping categories and their products.
-# shopping_categories = ["Fruits", "Vegetables", "Dairy"]
-# products = ["Apple", "Banana", "Carrot", "Milk", "Cheese"]
-# for i in shopping_categories:
-#     for j in products:
-#         print(f"{i} - {j}")
-#     print()  # Move to next category
+shopping_categories = ["Fruits", "Vegetables", "Dairy"]
+products = ["Apple", "Banana", "Carrot", "Milk", "Cheese"]
+for i in shopping_categories:
+    for j in products:
+        print(f"{i} - {j}")
+    print()  # Move to next category
 
 
 

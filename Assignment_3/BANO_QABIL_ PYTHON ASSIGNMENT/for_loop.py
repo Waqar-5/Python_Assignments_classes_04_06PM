@@ -2,12 +2,12 @@
 
 # Q#1. Print all file names in a given list of files.
 # List of file names
-# files = ["report.pdf", "data.csv", "image.png", "notes.txt", "presentation.pptx"]
+files = ["report.pdf", "data.csv", "image.png", "notes.txt", "presentation.pptx"]
 
 # Print all file names
-# print("List of files: ")
-# for file in files:
-#     print(file)
+print("List of files: ")
+for file in files:
+    print(file)
 
 # or 
 # print("List of files:\n" + "\n".join(files))
@@ -29,18 +29,19 @@
 
 
 
+print("*******************************************************")
 # Q: 2. Print each student’s name from a list with roll numbers.
 # List of students (roll number, name)
-# students = [
-#     (1, "Ali"),
-#     (2, "Aliza"),
-#     (3, "Ameer"),
-#     (4, "AliGul"),
-#     (5, "Sameer")
-# ]
-# print("Student Names:")
-# for roll, name in students:
-#     print(roll, ")",name)
+students = [
+    (1, "Ali"),
+    (2, "Aliza"),
+    (3, "Ameer"),
+    (4, "AliGul"),
+    (5, "Sameer")
+]
+print("Student Names:")
+for roll, name in students:
+    print(roll, ")",name)
 
 
 
@@ -154,20 +155,23 @@
 # to_string(index=False) → prints table nicely without extra index.
 
 
+
+
+print("***********************************************")
 # Q#3: Loop through an email list and print only those ending with `@gmail.com`.
-# emails = [
-#     "ali@gmail.com",
-#     "sara@yahoo.com",
-#     "waqar@gmail.com",
-#     "ayesha@hotmail.com",
-#     "sameer@gmail.com"
-# ]
+emails = [
+    "ali@gmail.com",
+    "sara@yahoo.com",
+    "waqar@gmail.com",
+    "ayesha@hotmail.com",
+    "sameer@gmail.com"
+]
 
 # 1️ Using simple for loop and str.endswith()
-# for email in emails:
-#     if email.endswith("@gmail.com"):
-#         print(email)
-# # email.endswith("@gmail.com") → checks if string ends with @gmail.com.
+for email in emails:
+    if email.endswith("@gmail.com"):
+        print(email)
+# email.endswith("@gmail.com") → checks if string ends with @gmail.com.
 # print("***************************************************")
 
 
@@ -236,10 +240,12 @@
 
 
 
+
+print("***********************************************")
 # Q#4: Display all product prices from a list with “PKR” appended.
-# prices = [100, 250, 399, 500, 1200]
-# for price in prices:
-#     print(f"{price} PKR")
+prices = [100, 250, 399, 500, 1200]
+for price in prices:
+    print(f"{price} PKR")
 
 #2. Using list comprehension (one-liner)
 # [print(f"{price} PKR") for price in prices]
@@ -286,17 +292,22 @@
 # print(df.to_string(index=False))
 
 
-#Q:5. Loop through contacts and mask their phone number except last 4 digits.
-# contacts = [
-#     {"name": "Ali", "phone": "03123456789"},
-#     {"name": "Sara", "phone": "03339876543"},
-#     {"name": "Waqar", "phone": "03001234567"}
-# ]
 
-# for contact in contacts:
-#     phone = contact["phone"]
-#     masked = "*" * (len(phone) - 4) + phone[-4:]
-#     print(f"{contact['name']}: {masked}")
+
+
+
+print("***********************************************************")
+#Q:5. Loop through contacts and mask their phone number except last 4 digits.
+contacts = [
+    {"name": "Ali", "phone": "03123456789"},
+    {"name": "Sara", "phone": "03339876543"},
+    {"name": "Waqar", "phone": "03001234567"}
+]
+
+for contact in contacts:
+    phone = contact["phone"]
+    masked = "*" * (len(phone) - 4) + phone[-4:]
+    print(f"{contact['name']}: {masked}")
 
 
 #1. Using String Slicing
@@ -364,12 +375,15 @@
 #     print(mask_number(number))
 
 
+
+
+print("***********************************************************")
 # Q:6. Loop through a list of transactions and print those above 50,000 PKR.
 # 1. Using a simple for loop + if
-# transactions = [2000, 340000, 40000, 20000, 50000, 450000, 200000]
-# for i in transactions:
-#     if i > 50000:
-#         print(f"{i} PKR")
+transactions = [2000, 340000, 40000, 20000, 50000, 450000, 200000]
+for i in transactions:
+    if i > 50000:
+        print(f"{i} PKR")
 
 # 2. Using List Comprehension
 # print([f"{i} PKR" for i in transactions if i > 50000])
@@ -421,16 +435,17 @@
 
 
 
+print("***********************************************************")
 # Q:7. Print all words from a sentence in reverse order.
 # 1.Using a for loop (manual reversal)
-# sentence = "I am happy"
-# words = sentence.split()
+sentence = "I am happy"
+words = sentence.split()
 
-# reversed_words = []
+reversed_words = []
 
-# for i in range(len(words) -1, -1, -1): # loop backwards
-#     reversed_words.append(words[i])
-# print(" ".join(reversed_words))   # Output: Python love I
+for i in range(len(words) -1, -1, -1): # loop backwards
+    reversed_words.append(words[i])
+print(" ".join(reversed_words))   # Output: Python love I
 
 
 # 2: Using split() + [::-1] (Pythonic way)
@@ -538,23 +553,26 @@
 
 
 
-# Q:8. Loop through a shopping cart and print “Out of stock” if quantity = 0.
-# shopping_cart = [
-#     {"item": "Laptop", "quantity": 2},
-#     {"item": "Phone", "quantity": 0},
-#     {"item": "Headphones", "quantity": 5},
-#     {"item": "Charger", "quantity": 0}
-# ]
 
-#1. Simple for loop with if
+
+print("***********************************************************")
+# Q:8. Loop through a shopping cart and print “Out of stock” if quantity = 0.
+shopping_cart = [
+    {"item": "Laptop", "quantity": 2},
+    {"item": "Phone", "quantity": 0},
+    {"item": "Headphones", "quantity": 5},
+    {"item": "Charger", "quantity": 0}
+]
+
+# 1. Simple for loop with if
 # Loop through each product in shopping_cart
-# import sys
-# sys.stdout.reconfigure(encoding='utf-8')
-# for product in shopping_cart:
-#      # Check if product quantity is 0
-#     if product["quantity"] == 0:
-#         print(product["item"], "→ Out of stock")  # Print with item name
-#         # print(product["item"], "\u2192 Out of stock")  # Unicode arrow
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+for product in shopping_cart:
+     # Check if product quantity is 0
+    if product["quantity"] == 0:
+        print(product["item"], "→ Out of stock")  # Print with item name
+        # print(product["item"], "\u2192 Out of stock")  # Unicode arrow
         
 
 
@@ -608,22 +626,24 @@
 #         print(item, "-> Out of stock")
 
 
-# 9. Print all pending tasks from a to-do list.
 
-# todo_list = [
-#     {"title": "Buy groceries", "status": "pending"},
-#     {"title": "Pay bills", "status": "done"},
-#     {"title": "Finish assignment", "status": "pending"},
-#     {"title": "Call mom", "status": "in-progress"},
-#     {"title": "Book tickets", "status": "PENDING"},
+print("***********************************************************")
+#Q:9. Print all pending tasks from a to-do list.
+
+todo_list = [
+    {"title": "Buy groceries", "status": "pending"},
+    {"title": "Pay bills", "status": "done"},
+    {"title": "Finish assignment", "status": "pending"},
+    {"title": "Call mom", "status": "in-progress"},
+    {"title": "Book tickets", "status": "PENDING"},
     
-# ]
+]
 # 1.Simple for-loop + normalize status (most common)
-# for i in todo_list:
-#     # Normalize status to lower-case so 'Pending', 'PENDING' also count
-#     status = i["status"].strip().lower()
-#     if status == "pending":
-#         print(i["title"], "-> pending")
+for i in todo_list:
+    # Normalize status to lower-case so 'Pending', 'PENDING' also count
+    status = i["status"].strip().lower()
+    if status == "pending":
+        print(i["title"], "-> pending")
 
 # 2. For-loop with a helper set of “pending-like” statuses
 
@@ -685,24 +705,26 @@
 
 
 
+
+print("***********************************************************")
 # Q#10: Print first 5 notifications from a list.
 # notifications list
-# notifications = [
-#     "New message from Ali",
-#     "Your order has been shipped",
-#     "Password change successful",
-#     "Meeting at 3 PM",
-#     "Assignment due tomorrow",
-#     "Update available for your app",
-#     "New follower request",
-#     "Low battery warning"
-# ]
+notifications = [
+    "New message from Ali",
+    "Your order has been shipped",
+    "Password change successful",
+    "Meeting at 3 PM",
+    "Assignment due tomorrow",
+    "Update available for your app",
+    "New follower request",
+    "Low battery warning"
+]
 
 
 # 1. Using for loop with range
 # Loop only over the first 5 indexes (0 to 4)
-# for i in range(5):
-#     print(notifications[i])  # print notification at index i
+for i in range(5):
+    print(notifications[i])  # print notification at index i
 
 
 

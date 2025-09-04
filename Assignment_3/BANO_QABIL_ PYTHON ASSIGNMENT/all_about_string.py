@@ -3,20 +3,21 @@
 
 #Q:59. Remove duplicate characters from string (no set).
 #  Initialize the input string
-# text = "programming"
+text = "programming"
 
 # #  Create an empty string to store unique characters
-# result = ""
+result = ""
 
 # #  Start iterating through each character in the input string
-# for char in text:
+for char in text:
 #     #  Check if the current character is NOT already in the result
-#     if char not in result:
+    if char not in result:
 #         #  Append the unique character to the result string
-#         result += char
+        result += char
 
 # #  Print the final string after removing duplicates
-# print(result)  # Output: "progamin"
+print(result)  # Output: "progamin"
+
 
 
 # Method 2: Using a list instead of string
@@ -46,26 +47,26 @@
 
 
 
-
+print("**********************************************")
 #Q:60. Find first non-repeated character in string.
 # string = "togther";
-# string = "Togther";
+string = "Togther";
 
 #  Create an empty dictionary to store character counts
-# char_count = {}
+char_count = {}
 
 # # Iterate through each character to count its occurrences
-# for char in string:
+for char in string:
 #     # Increment the count if character exists, else set it to 1
-#     char_count[char] = char_count.get(char, 0) + 1
+    char_count[char] = char_count.get(char, 0) + 1
 
 # # Iterate through string to find the first non-repeated character
-# for char in string:
+for char in string:
 #      # Check if the character count is exactly 1
-#     if char_count[char] == 1:
+    if char_count[char] == 1:
 #         # Print the first non-repeated character and exit loop
-#         print(char)  # Output: "p"
-#         break
+        print(char)  # Output: "p"
+        break
 
 
 
@@ -124,14 +125,15 @@
 
 
 
+print("***********************************************")
 # Q:61. Rotate string left (`abc` → `bca`).
-# sorted_str = "abc"
+sorted_str = "abc"
 
 # #  Rotate left by 1 using slicing
-# rotated = sorted_str[1:] + sorted_str[0]
+rotated = sorted_str[1:] + sorted_str[0]
 
 # # Print the rotated string
-# print(rotated) # Output: "bca"
+print(rotated) # Output: "bca"
 
 
 # Method 2: Using loop (manual shifting)
@@ -235,35 +237,36 @@ This makes rotation super simple and efficien
 
 
 
+print("***********************************************")
 
 # Method 1: Manual Counting with Loop
 #Q:62. Compress string (`aaabb` → `a3b2`).
 
 # Initialize the input string
-# text = "aaabb"
+text = "aaabb"
 
 # Create empty string to store compressed result
-# compressed = ""
+compressed = ""
 
 # Initialize count = 1 (for first character)
-# count = 1
+count = 1
 
 # # loop through string from index 1 to end
-# for i in range(1, len(text)):
+for i in range(1, len(text)):
 #     # If curreny char == previous char, increment count
-#     if text[i] == text[i - 1]:
-#         count += 1
-#     else:
+    if text[i] == text[i - 1]:
+        count += 1
+    else:
 #         # Append previous char + count to result
-#         compressed += text[i - 1] + str(count)
+        compressed += text[i - 1] + str(count)
 #         #  Reset count for new character
-#         count = 1
+        count = 1
     
 # #  Append the last char + count after loop ends
-# compressed += text[-1] + str(count)
+compressed += text[-1] + str(count)
 
 # # print Compressed result
-# print(compressed)
+print(compressed)
 
 
 # Method 2: Using While Loop
@@ -355,6 +358,7 @@ groupby groups consecutive identical elements in an iterable.
 
 
 
+print("***********************************************")
 
 #Q:63. Reverse words in sentence without slicing.
 # Method 1: Using split() and manual loop (build reversed list)
@@ -362,19 +366,19 @@ groupby groups consecutive identical elements in an iterable.
 sentence = "I love Python"
 
 # # Split sentence into list of words
-# words = sentence.split()
+words = sentence.split()
 
 # # Create empty list to store reversed words
-# reversed_words = []
+reversed_words = []
 
 # # Iterate backwards using range
-# for i in range(len(words) -1, -1, -1):
-#     reversed_words.append(words[i])
+for i in range(len(words) -1, -1, -1):
+    reversed_words.append(words[i])
 
 # # join the reversed list into a string
-# result = " ".join(reversed_words)
+result = " ".join(reversed_words)
 
-# print(result)  #Python love I
+print(result)  #Python love I
 
 
 # Method 2: Using reversed() built-in
@@ -465,6 +469,7 @@ sentence = "I love Python"
 
 
 
+print("***********************************************")
 
 #Q:64. Count uppercase vs lowercase letters.
 # Method 1: Using isupper() and islower()
@@ -472,22 +477,22 @@ sentence = "I love Python"
 text = "Hello World Python"
 
 # # Initialize counters
-# upper_count = 0
-# lower_count = 0
+upper_count = 0
+lower_count = 0
 
 # # Iterate through each character in string
-# for char in text:
+for char in text:
 #     # check if character is uppercase
-#     if char.isupper():
-#         upper_count += 1
+    if char.isupper():
+        upper_count += 1
 #     # check if character is lowercase
-#     elif char.islower():
-#         lower_count += 1
+    elif char.islower():
+        lower_count += 1
     
 # #  Print results
-# print("Text: ", text)
-# print("Uppercase:", upper_count)   # Output: 3
-# print("Lowercase:", lower_count)   # Output: 12
+print("Text: ", text)
+print("Uppercase:", upper_count)   # Output: 3
+print("Lowercase:", lower_count)   # Output: 12
 
 
 
@@ -559,25 +564,26 @@ text = "Hello World Python"
 
 
 
+print("***********************************************")
 
 #Q:65. Validate password (min 8 chars, at least 1 digit).
 # Method 1: Using Simple Loop
-# password = "Hello123" #password -> variable storing user password
-# is_valid = True  #is_valid -> flag (True by default)
+password = "Hello123" #password -> variable storing user password
+is_valid = True  #is_valid -> flag (True by default)
 
-# if len(password) < 8: #checks total length of string
-#     is_valid = False #set invalid if less than 8 chars
+if len(password) < 8: #checks total length of string
+    is_valid = False #set invalid if less than 8 chars
 
 
-# has_digit = False #flag to track digits
-# for char in password:  #loop through each character
-#     if char.isdigit():  #check if character is digit
-#         has_digit = True #set flag True
-#         break #exit loop early (optimization
-# if not has_digit:  #invert condition (if no digit found)
-#     is_valid = False #set overall flag False
+has_digit = False #flag to track digits
+for char in password:  #loop through each character
+    if char.isdigit():  #check if character is digit
+        has_digit = True #set flag True
+        break #exit loop early (optimization
+if not has_digit:  #invert condition (if no digit found)
+    is_valid = False #set overall flag False
 
-# print("Password Valid? : ", is_valid) #output result
+print("Password Valid? : ", is_valid) #output result
 
 
 # Method 2: Using Any + Loop
@@ -640,20 +646,21 @@ text = "Hello World Python"
 
 
 
+print("***********************************************")
 
 # 66. Find duplicate words in paragraph.
 # Method 1: Using Dictionary (manual counting)
-# text = "Python is great and Python is easy to learn and Python is popular"   #  text -> input paragraph
-# words = text.lower().split()
-# freq = {}
+text = "Python is great and Python is easy to learn and Python is popular"   #  text -> input paragraph
+words = text.lower().split()
+freq = {}
 
-# for w in words:
-#     freq[w] = freq.get(w, 0) + 1
+for w in words:
+    freq[w] = freq.get(w, 0) + 1
 
-# duplicates = [w for w, c in freq.items() if c > 1]
+duplicates = [w for w, c in freq.items() if c > 1]
 
-# print("Text: ", text)
-# print("Duplicates: ", duplicates)
+print("Text: ", text)
+print("Duplicates: ", duplicates)
 
 
 # Method 2: Using collections.Counter
@@ -712,18 +719,19 @@ text = "Hello World Python"
 
 
 
+print("***********************************************")
 #Q:67. Count frequency of vowels.
 # Method 1: Using Dictionary (manual loop)
 text = "Python Programming is Awesome"
-# vowels = "aeiou"
-# freq = {}
+vowels = "aeiou"
+freq = {}
 
-# for char in text.lower():
-#     if char in vowels:
-#         freq[char] = freq.get(char, 0) + 1
+for char in text.lower():
+    if char in vowels:
+        freq[char] = freq.get(char, 0) + 1
 
-# print("text: ", text)
-# print("Vowel Frequency:", freq)  
+print("text: ", text)
+print("Vowel Frequency:", freq)  
 
 
 
@@ -791,12 +799,13 @@ text = "Python Programming is Awesome"
 
 
 
+print("***********************************************")
 # Method 1: Sorting
 # Q:68. Check if two strings are anagrams.
 
-# s1, s2 = "listen", "silent"                 #  two strings
-# is_anagram = sorted(s1) == sorted(s2)       #  sorted() -> sort letters, compare lists
-# print("Anagram?", is_anagram)               #  True if same
+s1, s2 = "listen", "silent"                 #  two strings
+is_anagram = sorted(s1) == sorted(s2)       #  sorted() -> sort letters, compare lists
+print("Anagram?", is_anagram)               #  True if same
 
 
 

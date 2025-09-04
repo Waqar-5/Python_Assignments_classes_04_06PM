@@ -1,15 +1,16 @@
 # Section B: While Loop (Real-Life + Interview Qs)
 
 # 13. Keep asking user for password until it matches `"secure123"`.
-# while True:
-#     password = input("Enter the password: ")
-#     if password == "secure123":
-#         print("Access granted.")
-#         break
-#     else:
-#         print("Incorrect password. Try again.")
+while True:
+    password = input("Enter the password: ")
+    if password == "secure123":
+        print("Access granted.")
+        break
+    else:
+        print("Incorrect password. Try again.")
 
 
+print("***********************************************************")
 
 # Using while loop
 # Commit: Start of While Loop Approach
@@ -73,24 +74,25 @@
 
 
 
+print("***********************************************************")
 # Q#14. ATM PIN check with max 3 attempts.
 
 # Using while loop
-# Commit: Start of ATM PIN Check with While Loop
-# attempts = 0  # Commit: Initialize attempt counter
-# max_attempts = 3  # Commit: Set maximum attempts
-# correct_pin = "1234"  # Commit: Define correct PIN
-# while attempts < max_attempts:  # Commit: Loop until max attempts reached
-#     pin = input("Enter your ATM PIN: ")  # Commit: Ask user for PIN
-#     if pin == correct_pin:  # Commit: Check if PIN is correct
-#         print("PIN accepted. Access granted.")  # Commit: Success message
-#         break  # Commit: Exit loop
-#     else:
-#         attempts += 1  # Commit: Increment attempt counter
-#         print(f"Incorrect PIN. You have {max_attempts - attempts} attempts left.")  # Commit: Notify user
-# else:
-#     print("Too many incorrect attempts. Your account is locked.")  # Commit: Lock account after max attempts
-# # Commit: End of ATM PIN Check with While Loop
+# Start of ATM PIN Check with While Loop
+attempts = 0  #  Initialize attempt counter
+max_attempts = 3  #  Set maximum attempts
+correct_pin = "1234"  #  Define correct PIN
+while attempts < max_attempts:  #  Loop until max attempts reached
+    pin = input("Enter your ATM PIN: ")  #  Ask user for PIN
+    if pin == correct_pin:  #  Check if PIN is correct
+        print("PIN accepted. Access granted.")  #  Success message
+        break  #  Exit loop
+    else:
+        attempts += 1  #  Increment attempt counter
+        print(f"Incorrect PIN. You have {max_attempts - attempts} attempts left.")  #  Notify user
+else:
+    print("Too many incorrect attempts. Your account is locked.")  #  Lock account after max attempts
+#  End of ATM PIN Check with While Loop
 
 
 
@@ -140,19 +142,19 @@
 
 
 
-
+print("***********************************************************")
 #Q:15. Simulate downloading progress `[###      ] 30%`. 
 
-#1. Using while loop
-# import time #Import time for delay
+# 1. Using while loop
+import time #Import time for delay
 
-# progress = 0  # Initialize progress at 0
-# while progress <= 100:   #Continue until progress reaches 100
-#     bar = "#" * (progress // 10)  # Fill part of bar
-#     space = " " * (10 - (progress // 10))  # Remaining space
-#     print(f"[{bar}{space}] {progress}%", end="")  # Print progress bar
-#     time.sleep(0.5)  # Simulate download delay
-#     progress += 1  # Increase progress by 1
+progress = 0  # Initialize progress at 0
+while progress <= 100:   #Continue until progress reaches 100
+    bar = "#" * (progress // 10)  # Fill part of bar
+    space = " " * (10 - (progress // 10))  # Remaining space
+    print(f"[{bar}{space}] {progress}%", end="")  # Print progress bar
+    time.sleep(0.5)  # Simulate download delay
+    progress += 1  # Increase progress by 1
 
 
 
@@ -215,19 +217,22 @@
 # # Commit: End of Animated Progress Loader
 
 
+
+
+print("***********************************************************")
 # Q:16. While loop to collect student marks until “done” entered.
 
-# collect_student_marks = []  # Commit: Start with empty list
+collect_student_marks = []  #  Start with empty list
 
-# while True:  # Commit: Infinite loop to keep asking
-#     user_input = input("Enter your marks: ")  # Commit: Take user input
-#     if user_input == "done":  # Commit: Stop if user types "done"
-#         print("Ok")  # Commit: Confirmation message
-#         break  # Commit: Exit loop
-#     else:
-#         collect_student_marks.append(user_input)  # Commit: Add input to list
+while True:  #  Infinite loop to keep asking
+    user_input = input("Enter your marks: ")  #  Take user input
+    if user_input == "done":  #  Stop if user types "done"
+        print("Ok")  #  Confirmation message
+        break  #  Exit loop
+    else:
+        collect_student_marks.append(user_input)  #  Add input to list
 
-# print(collect_student_marks)  # Commit: Print collected marks
+print(collect_student_marks)  #  Print collected marks
 
 
 
@@ -335,18 +340,18 @@
 
 
 
-
+print("***********************************************************")
 #Q:17. Keep looping until internet connection = True. 
-# internet_connection = False  # Start with no internet connection
+internet_connection = False  # Start with no internet connection
 
-# while not internet_connection: # Loop until internet_connection is True
-#     print("Checking Connection...")  # Simulate checking
-#     user_inp = input("Type 'on' to connect internet: ") 
-#     if user_inp.lower() == 'on': # if user types "on"
-#         internet_connection = True  # change status to True
-#         print("Internet Connected!") # Success message
-#     else:
-#         print("No connection. Try again.")
+while not internet_connection: # Loop until internet_connection is True
+    print("Checking Connection...")  # Simulate checking
+    user_inp = input("Type 'on' to connect internet: ") 
+    if user_inp.lower() == 'on': # if user types "on"
+        internet_connection = True  # change status to True
+        print("Internet Connected!") # Success message
+    else:
+        print("No connection. Try again.")
 
 
 # 1.While True with break
@@ -429,16 +434,18 @@
 
      
 
+print("***********************************************************")
+
 # Other ways
 # Q:18. While loop for chatbot (keep asking until user types “bye”)
 
-# while True:  
-#     user_message = input("You: ")   # take user input
-#     if user_message.lower() == "bye":   # check if user says "bye"
-#         print("Chatbot: Goodbye! 👋")   # final message
-#         break   # stop the loop
-#     else:
-#         print("Chatbot: I am just a simple bot, I can’t understand much.")
+while True:  
+    user_message = input("You: ")   # take user input
+    if user_message.lower() == "bye":   # check if user says "bye"
+        print("Chatbot: Goodbye! 👋")   # final message
+        break   # stop the loop
+    else:
+        print("Chatbot: I am just a simple bot, I can’t understand much.")
 
 
 # 2: Condition in while loop
@@ -480,18 +487,18 @@
 
 
 
-
+print("***********************************************************")
 #Q:19. While loop for traffic light simulation.
 # it is infinite loop be careful
 
-# lights = ["Green", "Yellow", "Red"]
-# i = 0
+lights = ["Green", "Yellow", "Red"]
+i = 0
 
-# while True:
-#     print("Light:", lights[i])
-#     i += 1
-#     if i == len(lights):  # Reset to first light
-#         i = 0
+while True:
+    print("Light:", lights[i])
+    i += 1
+    if i == len(lights):  # Reset to first light
+        i = 0
 
 
 # Other ways
@@ -615,25 +622,25 @@
 
 
 
-
+print("***********************************************************")
 #Q: 20. Simulate a taxi meter counting distance.
 # Ask user continuously for distance (until "stop")
 #  Start taxi meter simulation with while loop
 total_distance = 0  
 
 #  Keep asking user for distance until they type 'stop'
-# while True:
-#     distance = input("Enter distance traveled (or 'stop'): ")
+while True:
+    distance = input("Enter distance traveled (or 'stop'): ")
 
-#     # Check if user wnats to stop
-#     if distance.lower() == "stop":
-#         break
+    # Check if user wnats to stop
+    if distance.lower() == "stop":
+        break
 
 #     # Convert input to integer and add to total
-#     total_distance += int(distance)
+    total_distance += int(distance)
 
 # # diplay total distance traveled
-# print("Total distance traveled:", total_distance, "km")
+print("Total distance traveled:", total_distance, "km")
 
 
 
@@ -672,8 +679,8 @@ total_distance = 0
 
 # While loop with fare calculation (extra realistic 🚖💰)
 # commit: Base fare setup
-fare_per_km = 50  
-distance = 0  
+# fare_per_km = 50  
+# distance = 0  
 
 # commit: keep asking until user ends trip
 # while True:  
