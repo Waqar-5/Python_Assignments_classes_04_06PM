@@ -118,3 +118,4 @@ Enhancing error handling
 Improving UI aesthetics
 
 Adding more data validation checks
+
